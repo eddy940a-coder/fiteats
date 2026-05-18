@@ -1971,9 +1971,12 @@
     });
 
     // ============ 初始化 ============
-    // Expose functions to global scope and call immediately
-    window.renderRecipes = renderRecipes;
-    window.renderRecipes();
+    // Execute immediately in global scope
+    (function() {
+      if (typeof renderRecipes === 'function') {
+        renderRecipes();
+      }
+    })();
   </script>
 </body>
 </html>
