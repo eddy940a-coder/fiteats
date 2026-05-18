@@ -1971,8 +1971,8 @@
     });
 
     // ============ 初始化 ============
-    // Simple direct call - this works because renderRecipes is defined above
-    renderRecipes();
+    // Use setTimeout to ensure DOM is fully ready
+    setTimeout(renderRecipes, 0);
   </script>
 </body>
 </html>
