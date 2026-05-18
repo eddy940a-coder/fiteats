@@ -1971,9 +1971,11 @@
     });
 
     // ============ 初始化 ============
-    renderRecipes();
-    renderShopping();
-    updateProfile();
+    document.addEventListener('DOMContentLoaded', function() {
+      renderRecipes();
+      renderShopping();
+      updateProfile();
+    });
   </script>
 </body>
 </html>
