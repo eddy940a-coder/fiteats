@@ -1971,11 +1971,14 @@
     });
 
     // ============ 初始化 ============
-    (function() {
+    // Direct call at script execution time
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        renderRecipes();
+      });
+    } else {
       renderRecipes();
-      // renderShopping();  // Temporarily disabled
-      updateProfile();
-    })();
+    }
   </script>
 </body>
 </html>
