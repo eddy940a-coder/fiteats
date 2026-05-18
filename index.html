@@ -1971,8 +1971,9 @@
     });
 
     // ============ 初始化 ============
-    // Use setTimeout to ensure DOM is fully ready
-    setTimeout(renderRecipes, 0);
+    // Expose functions to global scope and call immediately
+    window.renderRecipes = renderRecipes;
+    window.renderRecipes();
   </script>
 </body>
 </html>
