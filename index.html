@@ -1971,14 +1971,7 @@
     });
 
     // ============ 初始化 ============
-    // Direct call at script execution time
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        renderRecipes();
-      });
-    } else {
-      renderRecipes();
-    }
+    renderRecipes();
   </script>
 </body>
 </html>
